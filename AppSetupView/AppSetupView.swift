@@ -14,7 +14,7 @@ public struct AppSetupView: View {
 struct AppSetupView_Previews: PreviewProvider {
   static var previews: some View {
     AppSetupView()
-      .previewDevice("iPhone 12")
+      .previewDevice("iPhone 11")
   }
 }
 #endif
