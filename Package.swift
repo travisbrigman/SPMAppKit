@@ -5,11 +5,13 @@ import PackageDescription
 
 let package = Package(
     name: "SPMAppKit",
+    platforms: [.macOS(.v10_15), .iOS(.v14)],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "SPMAppKit",
-            targets: ["SPMAppKit"]),
+            targets: ["SPMAppKit",
+            "AppSetupView"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -21,6 +23,7 @@ let package = Package(
         .target(
             name: "SPMAppKit",
             dependencies: []),
+        .target(name: "AppSetupView", path: "AppSetupView/"),
         .testTarget(
             name: "SPMAppKitTests",
             dependencies: ["SPMAppKit"]),
